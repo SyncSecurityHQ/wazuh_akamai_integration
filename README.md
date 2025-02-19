@@ -96,7 +96,11 @@ This integration uses a Python script to fetch security events from the Akamai S
       </rule>
 
     </group>
-   ```
+   ```  
+    Restart the Wazuh Manager service after applying the changes..
+   ```bash
+    systemctl restart wazuh-manager
+   ```  
 
 ## How the Script Works
 
