@@ -50,7 +50,7 @@ This integration uses a Python script to fetch security events from the Akamai S
    ```
 
 2. **Configuration File:**  
-   Edit the `akamai_config.ini` file with your Akamai credentials. An example configuration:
+   Copy the `akamai_config.ini.template` file and name it `akamai_config.ini`. Edit the `akamai_config.ini` file with your Akamai credentials. An example configuration:
    ```ini
    [default]
    host = cloudsecurity.akamaiapis.net
