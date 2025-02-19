@@ -4,7 +4,7 @@ Akamai SIEM Wazuh Wodle using time-based mode with EdgeGrid Authentication
 
 This script polls the Akamai SIEM API for events that occurred in a defined time window.
 It calculates the current time, subtracts 5 minutes for the start of the window, and sets
-the end of the window to current time minus 5 seconds (to account for API latency).
+the end of the window to current time.
 The events are then decoded and printed as one JSON per line for ingestion by Wazuh.
 
 Dependencies:
