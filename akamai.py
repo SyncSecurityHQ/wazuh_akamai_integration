@@ -121,7 +121,7 @@ def process_events(events):
         sys.stdout.flush()
 
 # -------------------------------
-# Main execution: fetch events from (now - 5min) to (now - 5sec)
+# Main execution: fetch events from (now - 5min) to (now)
 # -------------------------------
 def main():
     now = int(time.time())
