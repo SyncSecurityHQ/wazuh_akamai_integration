@@ -25,7 +25,7 @@ from akamai.edgegrid import EdgeGridAuth
 # -------------------------------
 # Load configuration from external file
 # -------------------------------
-CONFIG_FILE = "/var/ossec/wodles/wazuh_akamai_integration/akamai_config.ini"
+CONFIG_FILE = "akamai_config.ini"
 config = configparser.ConfigParser()
 try:
     config.read(CONFIG_FILE)
