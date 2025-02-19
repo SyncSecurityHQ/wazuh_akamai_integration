@@ -1,0 +1,6 @@
+[default]
+host = cloudsecurity.akamaiapis.net
+config_id = YOUR_CONFIG_ID
+client_token = YOUR_CLIENT_TOKEN
+client_secret = YOUR_CLIENT_SECRET
+access_token = YOUR_ACCESS_TOKEN
