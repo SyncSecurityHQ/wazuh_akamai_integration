@@ -42,7 +42,7 @@ This integration uses a Python script to fetch security events from the Akamai S
 1. **Script Setup:**  
    Clone the repository in the wodle folder of your Wazuh Manager:
    ```bash
-   git clone https://gitlab.syncsecurity.it/scripts/wazuh_akamai_integration.git
+   git clone https://github.com/SyncSecurityHQ/wazuh_akamai_integration.git
    ```
    Ensure the script is executable:
    ```bash
