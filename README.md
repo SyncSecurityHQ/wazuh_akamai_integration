@@ -46,7 +46,7 @@ This integration uses a Python script to fetch security events from the Akamai S
    ```
    Ensure the script is executable:
    ```bash
-   chmod +x /var/ossec/wodles/akamai/akamai.py
+   chmod +x /var/ossec/wodles/wazuh_akamai_integration/akamai.py
    ```
 
 2. **Configuration File:**  
@@ -70,7 +70,7 @@ This integration uses a Python script to fetch security events from the Akamai S
         <disabled>no</disabled>
         <tag>akamai_siem</tag>
         <!-- Full path to your Python interpreter and your wodle script -->
-        <command>/usr/bin/python3 /var/ossec/wodles/akamai/akamai.py</command>
+        <command>/usr/bin/python3 /var/ossec/wodles/wazuh_akamai_integration/akamai.py</command>
         <!-- How often the script is executed (DO NOT CHANGE) -->
         <interval>5m</interval>
         <!-- Run the command immediately when the service starts -->
@@ -111,7 +111,7 @@ This integration uses a Python script to fetch security events from the Akamai S
 - **Manual Testing:**  
   You can run the script manually to test that it outputs valid JSON:
   ```bash
-  /usr/bin/python3 /var/ossec/wodles/akamai/akamai.py
+  /usr/bin/python3 /var/ossec/wodles/wazuh_akamai_integration/akamai.py
   ```
 - **Wazuh Integration:**  
   With the above wodle configuration, Wazuh will execute the script every 5 minutes, ingesting any events output by the script.
@@ -126,7 +126,3 @@ This integration uses a Python script to fetch security events from the Akamai S
 
 - **API Connectivity:**  
   Verify that your credentials and host settings in `akamai_config.ini` are correct and that your network allows outbound HTTPS connections to the Akamai API host.
-
-## License
-
-This integration is provided as-is. You are free to modify and distribute it according to your organization's policies.
