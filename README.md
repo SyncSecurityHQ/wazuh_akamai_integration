@@ -86,7 +86,7 @@ This integration uses a Python script to fetch security events from the Akamai S
 
 4. **Rule custom to generate alerts:**  
   By default the events are already decoded by the native JSON decoder, but do not trigger any relevant rule.  
-  From the rules tab create a new rule file named "akamai.xml" and paste the following code:
+  From the rules tab create a new rule file named `akamai.xml` and paste the following code:
    ```xml
     <group name="akamai,">
 
