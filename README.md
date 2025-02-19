@@ -50,7 +50,8 @@ This integration uses a Python script to fetch security events from the Akamai S
    ```
 
 2. **Configuration File:**  
-   Copy the `akamai_config.ini.template` file and name it `akamai_config.ini`. Edit the `akamai_config.ini` file with your Akamai credentials. An example configuration:
+   Copy the `akamai_config.ini.template` file and name it `akamai_config.ini`.  
+   Edit the `akamai_config.ini` file with your Akamai credentials. An example configuration:
    ```ini
    [default]
    host = cloudsecurity.akamaiapis.net
@@ -81,6 +82,20 @@ This integration uses a Python script to fetch security events from the Akamai S
         <ignore_output>no</ignore_output>
       </wodle>
     </ossec_config>
+   ```
+
+4. **Rule custom to generate alerts:**  
+  By default the events are already decoded by the native JSON decoder, but do not trigger any relevant rule.  
+  From the rules tab create a new rule file named "akamai.xml" and paste the following code:
+   ```xml
+    <group name="akamai,">
+
+      <rule id="100100" level="3">
+        <location>command_akamai_siem</location>
+        <description>Akamai - Event fetched.</description>
+      </rule>
+
+    </group>
    ```
 
 ## How the Script Works

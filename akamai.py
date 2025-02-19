@@ -25,7 +25,7 @@ from akamai.edgegrid import EdgeGridAuth
 # -------------------------------
 # Load configuration from external file
 # -------------------------------
-CONFIG_FILE = "akamai_config.ini"
+CONFIG_FILE = "/var/ossec/wodles/wazuh_akamai_integration/akamai_config.ini"
 config = configparser.ConfigParser()
 try:
     config.read(CONFIG_FILE)
@@ -126,7 +126,7 @@ def process_events(events):
 def main():
     now = int(time.time())
     from_time = now - 300   # 5 minutes ago (300 seconds)
-    to_time = now       # current time
+    to_time = now           # current time
     logging.info("Fetching events from %s to %s", from_time, to_time)
     
     events = fetch_events_time_based(from_time, to_time)
