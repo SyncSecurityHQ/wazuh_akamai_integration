@@ -2,7 +2,7 @@
 
 ![github_wazuh_akamai](https://github.com/user-attachments/assets/e0adcf51-4580-4a4b-8710-ea6eb60a2cc4)
 
-This integration uses a Python script to fetch security events from the Akamai SIEM API using a time-based query. The script collects events that occurred in a 5‑minute window (from current time minus 5 minutes to current time minus 5 seconds) and outputs each event as a single JSON line for ingestion by Wazuh.
+This integration uses a Python script to fetch security events from the Akamai SIEM API using a time-based query. The script collects events that occurred in a 5‑minute window (from current time minus 5 minutes to current time) and outputs each event as a single JSON line for ingestion by Wazuh.
 
 ![Wazuh Discover page with Akamai events](https://github.com/user-attachments/assets/39dcef22-4a11-4357-b704-96806801c901)
 
